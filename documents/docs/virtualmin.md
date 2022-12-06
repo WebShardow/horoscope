@@ -52,11 +52,29 @@ System Settings > “Re-run install Wizard” จากพาเนล Virtualmi
 
 ![Re-run install Wizard DNS configuration](./src/Re-run%20install%20Wizard%20DNS%20configuration.png)
 
+คลิกปุ่ม "NEXT" 
+
+![Re-run install Wizard All done](./src/Re-run%20install%20Wizard%20All%20done.png)
+
+ตอนนี้การกำหนดค่าเบื้องต้นก็เสร็จแล้ว แต่คุณสามารถเลือกได้ว่าจะกำหนดค่าส่วนอื่นๆเพิ่มเติมโดยคลิกปุ่ม "NEXT" หรือ กลับไปที่ Virtualmin โดยคลิกปุ่ม "Return to Virtualmin"
+
+กรณีผม คลิกปุ่ม "NEXT" เพื่อกำหนดค่าเพิ่มเติม
+
+จากนั้นจะเข้าสู่การกำหนดค่าความปลอดภัยของ Password storage โดยสามารถเลือกว่าจะเก็บข้อมูลเป็นแบบข้อความทั่วไป หรือ จะกำหนดให้เข้ารหัสข้อมูลรหัสผ่าน
+
+![Re-run install Wizard Password storage](./src/Re-run%20install%20Wizard%20Password%20storage.png)
+
+ในส่วนนี้ผมเลือก Only store hashed passwords จากนั้นคลิกปุ่ม "NEXT" 
+
+![Re-run install Wizard MariaDB database size](./src/Re-run%20install%20Wizard%20MariaDB%20database%20size.png)
+
+ในส่วนถัดมาจะเป็นการกำหนดขนาด MariaDB database size ในส่วนนี้ผมยังไม่มั่นใจว่าจะต้องใช้พื้นที่ประมาณเท่าไร ผมจึงกำหนดไว้กลางๆที่ Medium system with 2G of RAM with regular MariaDB use จากนั้นคลิกปุ่ม "NEXT"
+
+![Re-run install Wizard SSL key directory](./src/Re-run%20install%20Wizard%20SSL%20key%20directory.png)
+
+ในส่วนนี้จะเป็นการกำหนดค่า SSL key directory ผมใช้ค่าดั่งเดิม จากนั้นคลิกปุ่ม "NEXT"
 
 
-
-
- และตั้งค่า nameserver หลัก และ รอง ตามที่คุณต้องการ จะเป็นการดีที่จะทำเครื่องหมายที่ “(ข้ามการตรวจสอบความสามารถในการแก้ไขได้)” หากเซิร์ฟเวอร์ชื่อไม่ได้ลงทะเบียนที่ผู้รับจดทะเบียน ทำตามขั้นตอนที่เหลือโดยเพียงแค่คลิกปุ่มถัดไป
 
 
 คำศัพธ์เฉพาะ
