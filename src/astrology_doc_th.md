@@ -10,4 +10,5 @@ Thai Astrology Documentation By Vessuyan
 ## สารบัญ
 
 - [ทศดารา](10star.md)
+- [จักราศี](zodiact.md)
 - [ปีนักษัตร](astrology_th_constellation.md)
