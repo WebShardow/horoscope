@@ -57,10 +57,70 @@ export default async function handler(req, res) {
  * Postman : สำหรับทดสอบ API
  * Swagger UI : สำหรับสร้างเอกสารประกอบ API อัตโนมัติ
  * Docker : สำหรับสร้าง container และจัดการ deployment
-คำถามเพิ่มเติม :
- * คุณมีประสบการณ์กับ Next.js, Node.js, และ MySQL มากน้อยแค่ไหน?
- * คุณต้องการให้ API มีฟังก์ชันอะไรบ้างนอกเหนือจากการค้นหาคำแปล?
- * คุณมีข้อสงสัยเกี่ยวกับส่วนใดเป็นพิเศษ?
-ขอให้สนุกกับการสร้างโปรเจ็กต์นี้ครับ! หากมีคำถามเพิ่มเติม สามารถสอบถามได้เลย
-ต้องการให้ช่วยเขียนโค้ดส่วนไหนเป็นพิเศษไหมครับ?
+ข้อมูลเพิ่มเติม
  * https://github.com/NebuDev14/eduHub
+
+โครงสร้างเว็บไซต์เบื้องต้น (ปรับเปลี่ยนได้ตามความต้องการ)
+โดยทั่วไปแล้ว โครงสร้างเว็บไซต์สำหรับ API คำแปลโหราศาสตร์ อาจมีโครงสร้างดังนี้
+```
+โครงสร้างไดเรคทอรี่
+├── public
+│   ├── images
+│   └── styles
+├── pages
+│   ├── index.js
+│   ├── about.js
+│   ├── contact.js
+│   └── api
+│       ├── horoscope.js
+├── components
+│   ├── Header.js
+│   ├── Footer.js
+│   ├── SearchBar.js
+│   └── TranslationCard.js
+├── styles
+│   ├── global.css
+```
+ * public : เก็บไฟล์ static เช่น รูปภาพ, CSS
+ * pages : เก็บไฟล์ component สำหรับแต่ละหน้า เช่น หน้าหลัก, เกี่ยวกับเรา, ติดต่อเรา
+ * api : เก็บไฟล์ API routes สำหรับการเรียกข้อมูลจากฐานข้อมูล
+ * components : เก็บ component ที่ใช้ซ้ำในหลายๆ หน้า
+ * styles : เก็บไฟล์ stylesheet
+ตัวอย่างหน้าหลัก (index.js) :
+```JavaScript
+import SearchBar from '../components/SearchBar';
+import TranslationCard from '../components/TranslationCard';
+
+export default function Home({ translations }) {
+  return (
+    <div>
+      <SearchBar />
+      <div>
+        {translations.map((translation) => (
+          <TranslationCard key={translation.id} translation={translation} />
+        ))}
+      </div>
+    </div>
+  );
+}
+```
+ตัวอย่าง API route (api/horoscope.js) :
+```JavaScript
+// ... (เหมือนกับตัวอย่างที่ให้ไปก่อนหน้านี้)
+```
+
+ปรับแต่งให้เข้ากับความต้องการของคุณ :
+ * เพิ่มหน้าเพจ : เช่น หน้าคำนวณดวงชะตา, หน้าบทความ, หน้าชุมชน
+ * เพิ่ม component : เช่น component สำหรับแสดงผลดวงชะตา, component สำหรับแสดงความคิดเห็น
+ * ปรับแต่ง stylesheet : ออกแบบให้เว็บไซต์มีรูปแบบที่สวยงามและใช้งานง่าย
+ * เพิ่มฟังก์ชันการทำงาน : เช่น การลงทะเบียน, การเข้าสู่ระบบ, การเก็บประวัติการค้นหา
+คำแนะนำเพิ่มเติม:
+ * ใช้ `component-based architecture` : ช่วยให้การพัฒนาและการบำรุงรักษาโค้ดง่ายขึ้น
+ * ใช้ CSS framework : เช่น Tailwind CSS, Material UI เพื่อเร่งการพัฒนา
+ * ใช้ state management library : เช่น Redux, Zustand สำหรับจัดการ state ของแอปพลิเคชัน
+ * เพิ่มระบบ authentication : เพื่อให้ผู้ใช้สามารถลงทะเบียนและเข้าสู่ระบบได้
+ * เพิ่มระบบ caching : เพื่อเพิ่มประสิทธิภาพในการเรียกข้อมูลจากฐานข้อมูล
+ * ปรับแต่ง SEO : เพื่อให้เว็บไซต์ของคุณติดอันดับในการค้นหา
+หลังจากที่คุณให้ข้อมูลเพิ่มเติมเกี่ยวกับความต้องการของคุณแล้ว ผมจะสามารถให้คำแนะนำที่เจาะจงมากขึ้นได้
+
+สิ่งที่คุณอยากทราบเพิ่มเติมเกี่ยวกับการออกแบบโครงสร้างเว็บไซต์ไหมครับ?
